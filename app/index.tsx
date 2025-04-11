@@ -8,6 +8,8 @@ import {
 } from "react-native";
 import {Ionicons} from "@expo/vector-icons";
 import { LinearGradient } from 'expo-linear-gradient';
+import {router} from "expo-router";
+import * as Animatable from 'react-native-animatable';
 
 
 export default function Login() {
@@ -17,11 +19,11 @@ export default function Login() {
      className="flex-1"
      behavior={Platform.OS === "ios" ? "padding" : "height"}
      >
-        <View className={styles.containerHeader}>
+        <Animatable.View className={styles.containerHeader} animation={"slideInLeft"}>
           <Text className={styles.title}>Bem Vindo(a)</Text>
           <Text className={styles.subTitle}>Ao Windel Mobile</Text>
-        </View>
-        <View className={styles.containerForm}>
+        </Animatable.View>
+        <Animatable.View className={styles.containerForm} animation={"fadeInUp"}>
           <View className={styles.containerTitlesForm}>
             <Text className={styles.textTitleOneForm}>Venda com mais</Text>
             <Text className={styles.textTitleTwoForm}>Praticidade!</Text>
@@ -43,10 +45,10 @@ export default function Login() {
           </View>
           <Text className={styles.forgotPassword}>Esqueceu a senha?</Text>
 
-           <TouchableOpacity className={styles.button}>
+           <TouchableOpacity className={styles.button} onPress={() => router.replace("/home")}>
              <Text className={styles.textButton}>Entrar</Text>
            </TouchableOpacity>
-        </View>
+        </Animatable.View>
      </KeyboardAvoidingView>
     </LinearGradient>
   );
@@ -54,7 +56,7 @@ export default function Login() {
 
 const styles = {
   containerHeader: `mt-[50px] ml-[25px] mb-[40px]`,
-  containerForm: `flex-1 bg-[#F4F4F4] rounded rounded-s-3xl px-[25px]`,
+  containerForm: `flex-1 bg-[#F4F4F4] rounded-s-3xl px-[25px]`,
   title: `text-[27px] font-bold color-[#fff]`,
   subTitle: `text-[25px] color-[#fff]`,
   textTitleOneForm: `color-[#1448A8] text-[18px] font-bold`,
