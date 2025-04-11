@@ -1,9 +1,11 @@
 import {useState} from "react"
-import { View, Text } from 'react-native';
+import { View, Text, FlatList, TextInput } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import {Ionicons, Feather} from "@expo/vector-icons";
 import {router} from "expo-router";
 import Sales from "~/components/Sales";
+import Data from "../data.json";
+import CardProduct from "~/components/CardProduct";
 
 
 
@@ -30,6 +32,23 @@ export default function Home() {
              </View>
              <Feather name='log-out' size={25} color={"#fff"} onPress={() => {router.replace("/")}}/>
            </View>
+            <View className={styles.input}>
+                  <Ionicons name="search" size={25} color={"#B6C5DA"}/>
+                  <TextInput
+                    className="flex-1"
+                      placeholder="Busque um item"
+                  />
+            </View>
+           <FlatList
+              data={Data}
+              keyExtractor={(item) => String(item.id)}
+              renderItem={({item}) => (
+                <CardProduct
+                 name={item.nome}
+                 price={item.preco}
+             />
+           )}
+         />
         </View>
         <Sales/>
       </View>
@@ -45,5 +64,6 @@ const styles = {
   containerContent: `px-[10px] flex-1`,
   containerInfo: `bg-[#458BED] p-[10px] rounded-xl my-[15px] flex-row justify-between items-center`,
   labelUser: `text-[17px] color-[#fff] font-bold`,
-  babelEnterprise: `color-[#fff] text-[15px]`
+  babelEnterprise: `color-[#fff] text-[15px]`,
+  input: `w-full flex-row bg-[#FFFFFF] rounded-md py-1 px-2 items-center gap-1 border border-[#C9C9C9] mb-[15px]`,
 }

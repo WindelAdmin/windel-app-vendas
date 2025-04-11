@@ -4,6 +4,7 @@ import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
 import {Ionicons, Feather} from "@expo/vector-icons";
 import { useStore } from '../store/store';
 import ModalPayments from './ModalPayments';
+import {router} from "expo-router"
 
 export default function Sales() {
   const bottomSheetRef = useRef<BottomSheet>(null);
@@ -24,19 +25,22 @@ export default function Sales() {
           elevation: 10,
           shadowColor: "#000",
         }}
+        backgroundStyle={{
+          backgroundColor: "#F0F8FF"
+        }}
       >
         <BottomSheetView style={{flex:1}}>
         <View className={styles.containerContent}>
             <View className='flex-row items-center'>
-              <View className={styles.containerCart}>
+              <TouchableOpacity className={styles.containerCart} onPress={() => router.push("/cart")}>
                 <Ionicons name="cart" size={25} color={"#008000"}/>
                 <View>
                 <Text className='font-bold text-[17px]'>1 item</Text>
                 <Text>R$ 20,00</Text>
                 </View>
-              </View>
+              </TouchableOpacity>
               <TouchableOpacity className={styles.bgButton} onPress={() => setShowModalChanger(true)}>
-                <Text className={styles.textButton}>Cobrar</Text>
+                <Text className={styles.textButton}>Pagamento</Text>
               </TouchableOpacity>
             </View>
             <View className={styles.divider}></View>

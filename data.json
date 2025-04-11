@@ -1,0 +1,93 @@
+[
+    {
+      "id": 1,
+      "nome": "Camiseta Básica",
+      "descricao": "Camiseta 100% algodão, ideal para o dia a dia.",
+      "preco": 49.90
+    },
+    {
+      "id": 2,
+      "nome": "Calça Jeans",
+      "descricao": "Calça jeans azul escura, corte reto.",
+      "preco": 129.90
+    },
+    {
+      "id": 3,
+      "nome": "Tênis Esportivo",
+      "descricao": "Tênis leve e confortável, ideal para corridas.",
+      "preco": 199.90
+    },
+    {
+      "id": 4,
+      "nome": "Relógio Digital",
+      "descricao": "Relógio resistente à água com pulseira de silicone.",
+      "preco": 89.90
+    },
+    {
+      "id": 5,
+      "nome": "Mochila Escolar",
+      "descricao": "Mochila com vários compartimentos e alças ajustáveis.",
+      "preco": 79.90
+    },
+    {
+      "id": 6,
+      "nome": "Fone de Ouvido Bluetooth",
+      "descricao": "Fone com cancelamento de ruído e boa autonomia.",
+      "preco": 149.90
+    },
+    {
+      "id": 7,
+      "nome": "Jaqueta Corta-Vento",
+      "descricao": "Ideal para dias chuvosos, com tecido leve e impermeável.",
+      "preco": 179.90
+    },
+    {
+      "id": 8,
+      "nome": "Carteira de Couro",
+      "descricao": "Carteira compacta com acabamento premium.",
+      "preco": 59.90
+    },
+    {
+      "id": 9,
+      "nome": "Óculos de Sol",
+      "descricao": "Óculos com proteção UV400 e armação resistente.",
+      "preco": 99.90
+    },
+    {
+      "id": 10,
+      "nome": "Mouse Sem Fio",
+      "descricao": "Mouse ergonômico com conexão USB wireless.",
+      "preco": 39.90
+    },
+    {
+      "id": 11,
+      "nome": "Teclado Mecânico",
+      "descricao": "Teclado com iluminação RGB e switches de alta durabilidade.",
+      "preco": 249.90
+    },
+    {
+      "id": 12,
+      "nome": "Monitor 24\" Full HD",
+      "descricao": "Tela com alta resolução, ideal para produtividade.",
+      "preco": 799.00
+    },
+    {
+      "id": 13,
+      "nome": "Livro: Aprenda React",
+      "descricao": "Guia completo para começar no desenvolvimento com React.",
+      "preco": 59.90
+    },
+    {
+      "id": 14,
+      "nome": "Caneca Térmica",
+      "descricao": "Mantém a temperatura da bebida por até 6h.",
+      "preco": 34.90
+    },
+    {
+      "id": 15,
+      "nome": "Power Bank 10.000mAh",
+      "descricao": "Bateria portátil compatível com carregamento rápido.",
+      "preco": 119.90
+    }
+  ]
+  
