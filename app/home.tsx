@@ -1,9 +1,14 @@
+import {useState} from "react"
 import { View, Text } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import {Ionicons, Feather} from "@expo/vector-icons";
-import {router} from "expo-router"
+import {router} from "expo-router";
+import Sales from "~/components/Sales";
+
+
 
 export default function Home() {
+
 
   return (
       <View className={styles.container}>
@@ -26,6 +31,7 @@ export default function Home() {
              <Feather name='log-out' size={25} color={"#fff"} onPress={() => {router.replace("/")}}/>
            </View>
         </View>
+        <Sales/>
       </View>
   );
 }
