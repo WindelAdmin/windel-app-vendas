@@ -33,22 +33,25 @@ export default function Home() {
              <Feather name='log-out' size={25} color={"#fff"} onPress={() => {router.replace("/")}}/>
            </View>
             <View className={styles.input}>
-                  <Ionicons name="search" size={25} color={"#B6C5DA"}/>
-                  <TextInput
+                <Ionicons name="search" size={25} color={"#B6C5DA"}/>
+                <TextInput
                     className="flex-1"
                       placeholder="Busque um item"
-                  />
+                />
             </View>
-           <FlatList
-              data={Data}
-              keyExtractor={(item) => String(item.id)}
-              renderItem={({item}) => (
+            <View className="h-[57%]">
+              <FlatList
+                showsVerticalScrollIndicator={false}
+                data={Data}
+                keyExtractor={(item) => String(item.id)}
+                renderItem={({item}) => (
                 <CardProduct
-                 name={item.nome}
-                 price={item.preco}
+                  name={item.nome}
+                  price={item.preco}
+               />
+              )}
              />
-           )}
-         />
+            </View>
         </View>
         <Sales/>
       </View>

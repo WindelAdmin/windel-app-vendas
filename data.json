@@ -1,93 +1,392 @@
 [
-    {
-      "id": 1,
-      "nome": "Camiseta Básica",
-      "descricao": "Camiseta 100% algodão, ideal para o dia a dia.",
-      "preco": 49.90
-    },
-    {
-      "id": 2,
-      "nome": "Calça Jeans",
-      "descricao": "Calça jeans azul escura, corte reto.",
-      "preco": 129.90
-    },
-    {
-      "id": 3,
-      "nome": "Tênis Esportivo",
-      "descricao": "Tênis leve e confortável, ideal para corridas.",
-      "preco": 199.90
-    },
-    {
-      "id": 4,
-      "nome": "Relógio Digital",
-      "descricao": "Relógio resistente à água com pulseira de silicone.",
-      "preco": 89.90
-    },
-    {
-      "id": 5,
-      "nome": "Mochila Escolar",
-      "descricao": "Mochila com vários compartimentos e alças ajustáveis.",
-      "preco": 79.90
-    },
-    {
-      "id": 6,
-      "nome": "Fone de Ouvido Bluetooth",
-      "descricao": "Fone com cancelamento de ruído e boa autonomia.",
-      "preco": 149.90
-    },
-    {
-      "id": 7,
-      "nome": "Jaqueta Corta-Vento",
-      "descricao": "Ideal para dias chuvosos, com tecido leve e impermeável.",
-      "preco": 179.90
-    },
-    {
-      "id": 8,
-      "nome": "Carteira de Couro",
-      "descricao": "Carteira compacta com acabamento premium.",
-      "preco": 59.90
-    },
-    {
-      "id": 9,
-      "nome": "Óculos de Sol",
-      "descricao": "Óculos com proteção UV400 e armação resistente.",
-      "preco": 99.90
-    },
-    {
-      "id": 10,
-      "nome": "Mouse Sem Fio",
-      "descricao": "Mouse ergonômico com conexão USB wireless.",
-      "preco": 39.90
-    },
-    {
-      "id": 11,
-      "nome": "Teclado Mecânico",
-      "descricao": "Teclado com iluminação RGB e switches de alta durabilidade.",
-      "preco": 249.90
-    },
-    {
-      "id": 12,
-      "nome": "Monitor 24\" Full HD",
-      "descricao": "Tela com alta resolução, ideal para produtividade.",
-      "preco": 799.00
-    },
-    {
-      "id": 13,
-      "nome": "Livro: Aprenda React",
-      "descricao": "Guia completo para começar no desenvolvimento com React.",
-      "preco": 59.90
-    },
-    {
-      "id": 14,
-      "nome": "Caneca Térmica",
-      "descricao": "Mantém a temperatura da bebida por até 6h.",
-      "preco": 34.90
-    },
-    {
-      "id": 15,
-      "nome": "Power Bank 10.000mAh",
-      "descricao": "Bateria portátil compatível com carregamento rápido.",
-      "preco": 119.90
-    }
-  ]
-  
+  {
+    "id": 1,
+    "nome": "Camiseta Básica",
+    "descricao": "Camiseta 100% algodão, ideal para o dia a dia.",
+    "preco": 49.90
+  },
+  {
+    "id": 2,
+    "nome": "Calça Jeans",
+    "descricao": "Calça jeans azul escura, corte reto.",
+    "preco": 129.90
+  },
+  {
+    "id": 3,
+    "nome": "Tênis Esportivo",
+    "descricao": "Tênis leve e confortável, ideal para corridas.",
+    "preco": 199.90
+  },
+  {
+    "id": 4,
+    "nome": "Relógio Digital",
+    "descricao": "Relógio resistente à água com pulseira de silicone.",
+    "preco": 89.90
+  },
+  {
+    "id": 5,
+    "nome": "Mochila Escolar",
+    "descricao": "Mochila com vários compartimentos e alças ajustáveis.",
+    "preco": 79.90
+  },
+  {
+    "id": 6,
+    "nome": "Fone de Ouvido Bluetooth",
+    "descricao": "Fone com cancelamento de ruído e boa autonomia.",
+    "preco": 149.90
+  },
+  {
+    "id": 7,
+    "nome": "Jaqueta Corta-Vento",
+    "descricao": "Ideal para dias chuvosos, com tecido leve e impermeável.",
+    "preco": 179.90
+  },
+  {
+    "id": 8,
+    "nome": "Carteira de Couro",
+    "descricao": "Carteira compacta com acabamento premium.",
+    "preco": 59.90
+  },
+  {
+    "id": 9,
+    "nome": "Óculos de Sol",
+    "descricao": "Óculos com proteção UV400 e armação resistente.",
+    "preco": 99.90
+  },
+  {
+    "id": 10,
+    "nome": "Mouse Sem Fio",
+    "descricao": "Mouse ergonômico com conexão USB wireless.",
+    "preco": 39.90
+  },
+  {
+    "id": 11,
+    "nome": "Teclado Mecânico",
+    "descricao": "Teclado com iluminação RGB e switches de alta durabilidade.",
+    "preco": 249.90
+  },
+  {
+    "id": 12,
+    "nome": "Monitor 24\" Full HD",
+    "descricao": "Tela com alta resolução, ideal para produtividade.",
+    "preco": 799.00
+  },
+  {
+    "id": 13,
+    "nome": "Livro: Aprenda React",
+    "descricao": "Guia completo para começar no desenvolvimento com React.",
+    "preco": 59.90
+  },
+  {
+    "id": 14,
+    "nome": "Caneca Térmica",
+    "descricao": "Mantém a temperatura da bebida por até 6h.",
+    "preco": 34.90
+  },
+  {
+    "id": 15,
+    "nome": "Power Bank 10.000mAh",
+    "descricao": "Bateria portátil compatível com carregamento rápido.",
+    "preco": 119.90
+  },
+  {
+    "id": 51,
+    "nome": "Blusa de Moletom 51",
+    "descricao": "Blusa confortável com capuz e bolso frontal.",
+    "preco": 119.90
+  },
+  {
+    "id": 52,
+    "nome": "Chinelo Slide 52",
+    "descricao": "Ideal para o verão, leve e resistente.",
+    "preco": 39.90
+  },
+  {
+    "id": 53,
+    "nome": "Camiseta Estampada 53",
+    "descricao": "Camiseta com estampa moderna e divertida.",
+    "preco": 54.90
+  },
+  {
+    "id": 54,
+    "nome": "Bermuda Cargo 54",
+    "descricao": "Modelo com bolsos laterais e tecido resistente.",
+    "preco": 89.90
+  },
+  {
+    "id": 55,
+    "nome": "Tênis Casual 55",
+    "descricao": "Conforto e estilo para o dia a dia.",
+    "preco": 169.90
+  },
+  {
+    "id": 56,
+    "nome": "Relógio Analógico 56",
+    "descricao": "Design clássico com pulseira de couro.",
+    "preco": 149.90
+  },
+  {
+    "id": 57,
+    "nome": "Jaqueta Jeans 57",
+    "descricao": "Peça versátil, combina com qualquer look.",
+    "preco": 199.90
+  },
+  {
+    "id": 58,
+    "nome": "Boné Estiloso 58",
+    "descricao": "Boné com aba curva e estampa moderna.",
+    "preco": 44.90
+  },
+  {
+    "id": 59,
+    "nome": "Camisa Social Slim 59",
+    "descricao": "Ideal para ocasiões formais.",
+    "preco": 99.90
+  },
+  {
+    "id": 60,
+    "nome": "Chaveiro Personalizado 60",
+    "descricao": "Modelo criativo para decorar suas chaves.",
+    "preco": 14.90
+  },
+  {
+    "id": 61,
+    "nome": "Carteira Slim 61",
+    "descricao": "Compacta, prática e moderna.",
+    "preco": 39.90
+  },
+  {
+    "id": 62,
+    "nome": "Capa de Celular 62",
+    "descricao": "Proteção com estilo para seu smartphone.",
+    "preco": 29.90
+  },
+  {
+    "id": 63,
+    "nome": "Fone Gamer 63",
+    "descricao": "Som imersivo com microfone embutido.",
+    "preco": 199.90
+  },
+  {
+    "id": 64,
+    "nome": "Webcam Full HD 64",
+    "descricao": "Ideal para videochamadas e streaming.",
+    "preco": 149.90
+  },
+  {
+    "id": 65,
+    "nome": "Cadeira Gamer 65",
+    "descricao": "Conforto máximo para longas sessões.",
+    "preco": 999.00
+  },
+  {
+    "id": 66,
+    "nome": "Abajur LED 66",
+    "descricao": "Luz suave e design moderno.",
+    "preco": 89.90
+  },
+  {
+    "id": 67,
+    "nome": "Mousepad RGB 67",
+    "descricao": "Iluminação customizável para sua mesa.",
+    "preco": 59.90
+  },
+  {
+    "id": 68,
+    "nome": "Balança Digital 68",
+    "descricao": "Medição precisa para o seu dia a dia.",
+    "preco": 89.90
+  },
+  {
+    "id": 69,
+    "nome": "Travesseiro Ortopédico 69",
+    "descricao": "Melhora sua postura durante o sono.",
+    "preco": 139.90
+  },
+  {
+    "id": 70,
+    "nome": "Aspirador Portátil 70",
+    "descricao": "Compacto e ideal para limpeza rápida.",
+    "preco": 179.90
+  },
+  {
+    "id": 71,
+    "nome": "Copo Retrátil 71",
+    "descricao": "Perfeito para levar na mochila.",
+    "preco": 24.90
+  },
+  {
+    "id": 72,
+    "nome": "Garrafa Térmica 72",
+    "descricao": "Mantém a bebida quente por até 8h.",
+    "preco": 59.90
+  },
+  {
+    "id": 73,
+    "nome": "Luminária USB 73",
+    "descricao": "Ideal para uso no notebook.",
+    "preco": 19.90
+  },
+  {
+    "id": 74,
+    "nome": "Headset Profissional 74",
+    "descricao": "Qualidade de som premium para reuniões.",
+    "preco": 249.90
+  },
+  {
+    "id": 75,
+    "nome": "Caderno Inteligente 75",
+    "descricao": "Folhas removíveis e capa resistente.",
+    "preco": 49.90
+  },
+  {
+    "id": 76,
+    "nome": "Pasta Organizadora 76",
+    "descricao": "Mantenha seus documentos seguros.",
+    "preco": 34.90
+  },
+  {
+    "id": 77,
+    "nome": "Lancheira Térmica 77",
+    "descricao": "Ideal para levar refeições ao trabalho.",
+    "preco": 44.90
+  },
+  {
+    "id": 78,
+    "nome": "Tupperware 3 peças 78",
+    "descricao": "Conjunto prático e versátil.",
+    "preco": 39.90
+  },
+  {
+    "id": 79,
+    "nome": "Toalha de Banho 79",
+    "descricao": "Toque macio e alta absorção.",
+    "preco": 49.90
+  },
+  {
+    "id": 80,
+    "nome": "Sanduicheira Elétrica 80",
+    "descricao": "Prepare lanches em minutos.",
+    "preco": 99.90
+  },
+  {
+    "id": 81,
+    "nome": "Tênis de Corrida 81",
+    "descricao": "Modelo leve com amortecimento.",
+    "preco": 229.90
+  },
+  {
+    "id": 82,
+    "nome": "Bota de Couro 82",
+    "descricao": "Ideal para inverno e trilhas.",
+    "preco": 279.90
+  },
+  {
+    "id": 83,
+    "nome": "Casaco de Lã 83",
+    "descricao": "Estilo e aquecimento no frio.",
+    "preco": 199.90
+  },
+  {
+    "id": 84,
+    "nome": "Perfume Masculino 84",
+    "descricao": "Fragrância marcante e duradoura.",
+    "preco": 149.90
+  },
+  {
+    "id": 85,
+    "nome": "Perfume Feminino 85",
+    "descricao": "Notas florais e sofisticadas.",
+    "preco": 159.90
+  },
+  {
+    "id": 86,
+    "nome": "Secador de Cabelo 86",
+    "descricao": "Alta potência e tecnologia iônica.",
+    "preco": 189.90
+  },
+  {
+    "id": 87,
+    "nome": "Chapinha Profissional 87",
+    "descricao": "Cabelos lisos e brilhantes.",
+    "preco": 199.90
+  },
+  {
+    "id": 88,
+    "nome": "Escova Elétrica 88",
+    "descricao": "Melhore sua escovação diária.",
+    "preco": 129.90
+  },
+  {
+    "id": 89,
+    "nome": "Smartwatch 89",
+    "descricao": "Acompanhe seus passos e batimentos.",
+    "preco": 299.90
+  },
+  {
+    "id": 90,
+    "nome": "Balança de Cozinha 90",
+    "descricao": "Precisão para suas receitas.",
+    "preco": 59.90
+  },
+  {
+    "id": 91,
+    "nome": "Luva Térmica 91",
+    "descricao": "Segurança ao cozinhar.",
+    "preco": 19.90
+  },
+  {
+    "id": 92,
+    "nome": "Panela Antiaderente 92",
+    "descricao": "Cozinhe com menos óleo.",
+    "preco": 89.90
+  },
+  {
+    "id": 93,
+    "nome": "Fogareiro Portátil 93",
+    "descricao": "Ideal para camping.",
+    "preco": 109.90
+  },
+  {
+    "id": 94,
+    "nome": "Lanterna Recarregável 94",
+    "descricao": "Alta potência e longa duração.",
+    "preco": 79.90
+  },
+  {
+    "id": 95,
+    "nome": "Canivete Multiuso 95",
+    "descricao": "Ferramenta prática para emergências.",
+    "preco": 49.90
+  },
+  {
+    "id": 96,
+    "nome": "Guarda-Chuva Reforçado 96",
+    "descricao": "Estrutura resistente ao vento.",
+    "preco": 59.90
+  },
+  {
+    "id": 97,
+    "nome": "Cadeado com Senha 97",
+    "descricao": "Segurança sem chave.",
+    "preco": 34.90
+  },
+  {
+    "id": 98,
+    "nome": "Tapete Antiderrapante 98",
+    "descricao": "Evita acidentes em áreas molhadas.",
+    "preco": 39.90
+  },
+  {
+    "id": 99,
+    "nome": "Lixeira de Pia 99",
+    "descricao": "Compacta e higiênica para cozinha.",
+    "preco": 19.90
+  },
+  {
+    "id": 100,
+    "nome": "Garrafa de Aço Inox 100",
+    "descricao": "Garrafa térmica com capacidade para 750ml.",
+    "preco": 79.90
+  }
+]

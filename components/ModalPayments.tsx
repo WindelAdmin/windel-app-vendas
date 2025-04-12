@@ -42,7 +42,7 @@ export default function ModalPayments() {
 
 const styles = {
   container: `flex-1 bg-[rgba(0,0,0,0.5)] justify-center items-center`,
-  containerContent: `w-[85%] h-[40%] bg-[#fff] rounded-xl p-[10px]`,
+  containerContent: `w-[85%] bg-[#fff] rounded-xl p-[10px]`,
   title: `pr-7 font-bold`,
   containerCardsPayments: `flex-row flex-wrap space-x-4 gap-4 justify-center`,
   cardPayments: `justify-center items-center w-[40%] h-[90px] rounded border border-[#DCDCDC]`,

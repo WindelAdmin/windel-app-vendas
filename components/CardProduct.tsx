@@ -22,7 +22,7 @@ export default function CardProduct ({name, price}: CardProps){
 
 const style = {
     image: `bg-[#DCDCDC] w-[20%] rounded justify-center items-center`,
-    container: `flex-row justify-between bg-[#fff] mb-[10px] p-[10px] rounded-md`,
-    labelName:`text-[18px] font-bold`,
-    labelPrice: `font-bold`
+    container: `flex-row justify-between bg-[#fff] mb-[10px] p-[10px] rounded-md border border-[#D3D3D3]`,
+    labelName:`text-[18px] font-bold color-[#363636]`,
+    labelPrice: `font-bold color-[#363636]`
 }
