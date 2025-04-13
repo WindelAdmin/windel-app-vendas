@@ -66,7 +66,7 @@ export default function Sales() {
                 </View>
             </View>
                <Modal visible={showModalCharger} transparent={true}>
-                <ModalPayments/>
+                 <ModalPayments/>
                </Modal>
            </KeyboardAvoidingView>
         </BottomSheetView>

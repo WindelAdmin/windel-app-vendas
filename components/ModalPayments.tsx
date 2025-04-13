@@ -42,9 +42,9 @@ export default function ModalPayments() {
 
 const styles = {
   container: `flex-1 bg-[rgba(0,0,0,0.5)] justify-center items-center`,
-  containerContent: `w-[85%] bg-[#fff] rounded-xl p-[10px]`,
+  containerContent: `w-[85%] bg-[#fff] rounded-xl p-[10px] overflow-hidden`,
   title: `pr-7 font-bold`,
-  containerCardsPayments: `flex-row flex-wrap space-x-4 gap-1 justify-center`,
+  containerCardsPayments: `flex-row flex-wrap gap-1 justify-center`,
   cardPayments: `justify-center items-center p-[14px] h-[90px] rounded border border-[#DCDCDC]`,
   labelValue: `text-[25px] my-[10px] self-center font-bold` 
 }
