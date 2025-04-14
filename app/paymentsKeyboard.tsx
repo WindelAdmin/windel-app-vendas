@@ -4,11 +4,16 @@ import { LinearGradient } from 'expo-linear-gradient';
 import {Ionicons, Feather} from "@expo/vector-icons";
 import {router, useLocalSearchParams} from "expo-router";
 import { useStore } from "~/store/store";
+import  NumericPad from  'react-native-numeric-pad'
+import { useState, useRef } from "react";
+
 
 export default function PaymentsKeyboard(){
     
     const {paymentForm} = useLocalSearchParams();
     const {setShowModalChanger} = useStore()
+    const [amount, setAmount] = useState('')
+    const numpadRef = useRef<any>(null)
 
     return(
       <View className={styles.container}>
@@ -25,6 +30,17 @@ export default function PaymentsKeyboard(){
          <View className={styles.containerValue}>
             <Text className={styles.textTotal}>Total:</Text>
             <Text className={styles.value}>R$ 20,00</Text>
+         </View>
+         <View className="px-4">
+          <NumericPad
+           {...( { ref: numpadRef } as any )}
+           numLength={8}
+           buttonSize={60}
+           activeOpacity={0.1}
+           onValueChange={value => setAmount(value)}
+           allowDecimal={true}
+           onRightBottomButtonPress={() => {numpadRef.current?.clear();}}
+         />
          </View>
       </View>
     )
