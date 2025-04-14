@@ -1,18 +1,29 @@
-import {View, Text, TouchableOpacity, StyleSheet} from "react-native";
+import {
+  View, 
+  Text, 
+  TouchableOpacity, 
+  Modal
+} from "react-native";
 import {Ionicons, Feather, FontAwesome, MaterialIcons, MaterialCommunityIcons} from "@expo/vector-icons";
 import { useStore } from "~/store/store";
 import {router} from "expo-router";
 import { BlurView } from 'expo-blur';
+import PaymentMethod from "./PaymentMethod";
+
 
 export default function ModalPayments() {
 
-  const {setShowModalChanger} = useStore()
+  const {
+    setShowModalCharger,
+    showModalPaymentMethod,
+    setShowModalPaymentMethod
+  } = useStore()
 
     return (
       <BlurView intensity={80} tint="dark" style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
          <View className={styles.containerContent}>
            <View className="flex-row items-center justify-between">
-             <Ionicons name="arrow-back" size={25} onPress={() => setShowModalChanger(false)}/>
+             <Ionicons name="arrow-back" size={25} onPress={() => setShowModalCharger(false)}/>
               <Text className={styles.title}>Formas de Pagamento</Text>
             <View></View>
           </View>
@@ -21,7 +32,7 @@ export default function ModalPayments() {
                 <TouchableOpacity 
                   className={styles.cardPayments}
                   onPress={() => {
-                    setShowModalChanger(false);
+                    setShowModalCharger(false);
                     router.push({
                         pathname: "/paymentsKeyboard",
                         params: {
@@ -36,6 +47,7 @@ export default function ModalPayments() {
 
                 <TouchableOpacity 
                   className={styles.cardPayments}
+                  onPress={() => setShowModalPaymentMethod(true)}
                   >
                     <FontAwesome name="credit-card" size={25}/>
                     <Text>Crédito</Text>
@@ -44,7 +56,7 @@ export default function ModalPayments() {
                 <TouchableOpacity 
                   className={styles.cardPayments}
                   onPress={() => {
-                    setShowModalChanger(false);
+                    setShowModalCharger(false);
                     router.push({
                         pathname: "/paymentsKeyboard",
                         params: {
@@ -60,7 +72,7 @@ export default function ModalPayments() {
                 <TouchableOpacity 
                   className={styles.cardPayments}
                   onPress={() => {
-                    setShowModalChanger(false);
+                    setShowModalCharger(false);
                     router.push({
                         pathname: "/paymentsKeyboard",
                         params: {
@@ -69,12 +81,15 @@ export default function ModalPayments() {
                     });
                   }} 
                   >
-                    <MaterialCommunityIcons name="barcode" size={25}/>
+                    <MaterialCommunityIcons name="barcode" size={25} />
                     <Text>Boleto</Text>
                 </TouchableOpacity>
 
             </View>
          </View>
+         <Modal visible={showModalPaymentMethod} transparent={true}>
+            <PaymentMethod/>
+         </Modal>
       </BlurView>
     )
 }

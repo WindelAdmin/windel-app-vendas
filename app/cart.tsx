@@ -10,7 +10,7 @@ export default function Cart(){
 
    const {
       showModalCharger,
-      setShowModalChanger
+      setShowModalCharger
     } = useStore()
 
     return(
@@ -47,7 +47,7 @@ export default function Cart(){
                 </View>
               </TouchableOpacity>
             </View>
-            <TouchableOpacity className={styles.buttonPayment} onPress={() => setShowModalChanger(true)}>
+            <TouchableOpacity className={styles.buttonPayment} onPress={() => setShowModalCharger(true)}>
               <Text className={styles.textButton}>Pagamento</Text>
             </TouchableOpacity>
             <TouchableOpacity className={styles.buttonCancelSale}>

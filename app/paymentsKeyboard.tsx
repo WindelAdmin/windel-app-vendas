@@ -11,7 +11,7 @@ import { useState, useRef } from "react";
 export default function PaymentsKeyboard(){
     
     const {paymentForm} = useLocalSearchParams();
-    const {setShowModalChanger} = useStore()
+    const {setShowModalCharger: setShowModalChanger} = useStore()
     const [amount, setAmount] = useState('')
     const numpadRef = useRef<any>(null)
 

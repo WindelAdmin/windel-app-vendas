@@ -13,7 +13,7 @@ export default function Sales() {
 
   const {
     showModalCharger,
-    setShowModalChanger
+    setShowModalCharger
   } = useStore()
 
   return (
@@ -48,7 +48,7 @@ export default function Sales() {
                     <Text>R$ 20,00</Text>
                     </View>
                   </TouchableOpacity>
-                  <TouchableOpacity className={styles.bgButton} onPress={() => setShowModalChanger(true)}>
+                  <TouchableOpacity className={styles.bgButton} onPress={() => setShowModalCharger(true)}>
                     <Text className={styles.textButton}>Pagamento</Text>
                   </TouchableOpacity>
                 </View>
