@@ -1,5 +1,5 @@
 import React from "react";
-import {View, Text} from "react-native";
+import {View, Text, TouchableOpacity} from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import {Ionicons, Feather} from "@expo/vector-icons";
 import {router, useLocalSearchParams} from "expo-router";
@@ -35,13 +35,22 @@ export default function PaymentsKeyboard(){
           <NumericPad
            {...( { ref: numpadRef } as any )}
            numLength={8}
-           buttonSize={60}
+           buttonSize={95}
            activeOpacity={0.1}
            onValueChange={value => setAmount(value)}
-           allowDecimal={true}
+           allowDecimal={false}
+           rightBottomButton={<Ionicons name="backspace" size={28} color={'#0251BD'}/>}
            onRightBottomButtonPress={() => {numpadRef.current?.clear();}}
+           buttonTextStyle={{ 
+            fontWeight: 'bold', 
+            fontSize: 40,
+            color: "#4F4F4F"
+          }} 
          />
          </View>
+         <TouchableOpacity className={styles.buttonPayment} >
+              <Text className={styles.textButton}>Confirmar pagamento</Text>
+          </TouchableOpacity>
       </View>
     )
 }
@@ -51,7 +60,9 @@ const styles = {
     container: `flex-1`,
     subContainer: `flex-row items-center`,
     header: `px-[20px] py-[20px] rounded-b-2xl overflow-hidden flex-row justify-between items-center`,
-    containerValue: `items-center justify-center py-6 gap-1`,
+    containerValue: `items-center justify-center py-10 gap-1`,
     textTotal: `text-[18px] font-semibold color-gray-600`,
-    value: `text-[35px] font-bold`
+    value: `text-[35px] font-bold`,
+    buttonPayment: `bg-[#0251BD] rounded p-[12px] mx-[20px] mt-[20px]`,
+    textButton: `text-center color-[#fff] font-bold`,
 }
