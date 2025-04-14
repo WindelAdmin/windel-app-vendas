@@ -11,5 +11,5 @@ export const useStore = create<SallerState>((set) => ({
   showModalCharger: false,
   showModalPaymentMethod: false,
   setShowModalCharger: (value) => set({showModalCharger: value}),
-  setShowModalPaymentMethod: (value) => set({showModalPaymentMethod: value})
+  setShowModalPaymentMethod: (value) => set({showModalPaymentMethod: value}),
 }));

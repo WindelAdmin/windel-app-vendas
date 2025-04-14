@@ -1,3 +1,4 @@
+import {useState} from "react"
 import { 
   View, 
   Text,
@@ -10,9 +11,26 @@ import {Ionicons} from "@expo/vector-icons";
 import { LinearGradient } from 'expo-linear-gradient';
 import {router} from "expo-router";
 import * as Animatable from 'react-native-animatable';
+import { useStore } from "~/store/store";
 
 
 export default function Login() {
+
+  const [msgInputEmpty, setMsgInputEmpty] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [isNotShowPassword, setIsNotShowPassword] = useState(true);
+
+
+  const handleLogin = () => {
+    if(email.trim() === "" || password.trim() === "") {
+      setMsgInputEmpty("Preencha o campo");
+      return;
+    }else{
+      router.replace("/home")
+    }
+  }
+
   return (
     <LinearGradient className="flex-1"  colors={['#0965E5', '#0014EE', '#2773DC']} start={{ x: 0.4, y: 0.0 }}>
      <KeyboardAvoidingView 
@@ -31,21 +49,29 @@ export default function Login() {
           <View className={styles.input}>
              <Ionicons name="person-circle" size={25} color={"#B6C5DA"}/>
              <TextInput
+               onChangeText={(value) => setEmail(value)}
                className="flex-1"
                placeholder="Usuário"
              />
           </View>
+          <Text style={{display: `${email.length != 0 ? "none" : msgInputEmpty == "" ? "none" : "flex" }`, color: "#FF0000"}}>{msgInputEmpty}</Text>
+          
           <View className={styles.input}>
               <Ionicons name="lock-closed" size={25} color={"#B6C5DA"}/>
               <TextInput
+                secureTextEntry={isNotShowPassword}
+                onChangeText={(value) => setPassword(value)}
                 className="flex-1"
                 placeholder="Senha"
               />
-              <Ionicons name="eye" size={25} color={"#B6C5DA"}/>
+              <Ionicons 
+                name={isNotShowPassword ? "eye-off" : "eye"} size={25} color={"#B6C5DA"} onPress={() => setIsNotShowPassword(!isNotShowPassword)}/>
           </View>
+          <Text style={{display: `${password.length != 0 ? "none" : msgInputEmpty == "" ? "none" : "flex" }`, color: "#FF0000"}}>{msgInputEmpty}</Text>
+
           <Text className={styles.forgotPassword}>Esqueceu a senha?</Text>
 
-           <TouchableOpacity className={styles.button} onPress={() => router.replace("/home")}>
+           <TouchableOpacity className={styles.button} onPress={handleLogin}>
              <Text className={styles.textButton}>Entrar</Text>
            </TouchableOpacity>
         </Animatable.View>
