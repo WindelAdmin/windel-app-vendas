@@ -39,10 +39,10 @@ export default function Home() {
                       placeholder="Busque um item"
                 />
             </View>
-            <View className="h-[57%]">
               <FlatList
                 showsVerticalScrollIndicator={false}
                 data={Data}
+                contentContainerStyle={{ paddingBottom: 120 }}
                 keyExtractor={(item) => String(item.id)}
                 renderItem={({item}) => (
                 <CardProduct
@@ -51,7 +51,6 @@ export default function Home() {
                />
               )}
              />
-            </View>
         </View>
         <Sales/>
       </View>
