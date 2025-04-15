@@ -31,38 +31,38 @@ export default function PaymentsKeyboard(){
             <Text className={styles.textTotal}>Total:</Text>
             <Text className={styles.value}>R$ 20,00</Text>
          </View>
-         <View className="px-4">
-          <NumericPad
-           {...( { ref: numpadRef } as any )}
-           numLength={8}
-           buttonSize={95}
-           activeOpacity={0.1}
-           onValueChange={value => setAmount(value)}
-           allowDecimal={false}
-           rightBottomButton={<Ionicons name="backspace" size={28} color={'#0251BD'}/>}
-           onRightBottomButtonPress={() => {numpadRef.current?.clear();}}
-           buttonTextStyle={{ 
-            fontWeight: 'bold', 
-            fontSize: 40,
-            color: "#4F4F4F"
-          }} 
-         />
+         <View className="px-4 flex-1">
+            <NumericPad
+            {...( { ref: numpadRef } as any )}
+            numLength={8}
+            buttonSize={80}
+            activeOpacity={0.1}
+            onValueChange={value => setAmount(value)}
+            allowDecimal={false}
+            rightBottomButton={<Ionicons name="backspace" size={28} color={'#0251BD'}/>}
+            onRightBottomButtonPress={() => {numpadRef.current?.clear();}}
+            buttonTextStyle={{ 
+              fontWeight: 'bold', 
+              fontSize: 40,
+              color: "#4F4F4F",
+            }} 
+          />
          </View>
          <TouchableOpacity className={styles.buttonPayment} >
               <Text className={styles.textButton}>Confirmar pagamento</Text>
-          </TouchableOpacity>
+         </TouchableOpacity>
       </View>
     )
 }
 
 
 const styles = {
-    container: `flex-1`,
+    container: `flex-1 pb-[15px]`,
     subContainer: `flex-row items-center`,
     header: `px-[20px] py-[20px] rounded-b-2xl overflow-hidden flex-row justify-between items-center`,
-    containerValue: `items-center justify-center py-10 gap-1`,
+    containerValue: `items-center justify-center py-8 gap-1`,
     textTotal: `text-[18px] font-semibold color-gray-600`,
     value: `text-[35px] font-bold`,
-    buttonPayment: `bg-[#0251BD] rounded p-[12px] mx-[20px] mt-[20px]`,
+    buttonPayment: `bg-[#0251BD] rounded mx-[20px] py-[12px]`,
     textButton: `text-center color-[#fff] font-bold`,
 }
