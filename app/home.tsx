@@ -28,7 +28,7 @@ export default function Home() {
           </View>
         </LinearGradient>
         <View className={styles.containerContent}>
-           <View 
+        {/*    <View 
              className={
               theme == "dark" ? `bg-[#1C1C1C] p-[10px] border-gray-800 border rounded-xl my-[15px] flex-row justify-between items-center` 
               : `bg-[#458BED] p-[10px] rounded-xl my-[15px] flex-row justify-between items-center`}>
@@ -37,7 +37,7 @@ export default function Home() {
                <Text className={styles.labelEnterprise}>Windel Sistemas LTDA</Text>
              </View>
              <Feather name='log-out' size={25} color={"#fff"} onPress={() => {router.replace("/")}}/>
-           </View>
+           </View> */}
             <View className={styles.input}>
                 <Ionicons name="search" size={25} color={"#B6C5DA"}/>
                 <TextInput
@@ -64,7 +64,7 @@ export default function Home() {
 }
 
 const styles = {
-  header: `px-[20px] py-[20px] rounded-b-2xl overflow-hidden flex-row justify-between items-center`,
+  header: `px-[20px] py-[20px] rounded-b-2xl overflow-hidden flex-row justify-between items-center mb-[15px]`,
   mobile: `text-[20px] color-[#fff]`,
   windel: `text-[20px] color-[#fff] font-bold`,
   subContainer: `flex-row gap-1`,
