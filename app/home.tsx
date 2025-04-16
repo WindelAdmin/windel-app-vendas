@@ -6,8 +6,8 @@ import {router} from "expo-router";
 import Sales from "~/components/Sales";
 import Data from "../data.json";
 import CardProduct from "~/components/CardProduct";
-import { useTheme } from "~/components/Theme/ThemeProvider";
-import { StatusBar} from "react-native";
+import {  useTheme  } from "~/components/Theme/ThemeProvider";
+import {  StatusBar } from "react-native";
 
 
 
@@ -28,7 +28,7 @@ export default function Home() {
           </View>
         </LinearGradient>
         <View className={styles.containerContent}>
-        {/*    <View 
+        {/*<View 
              className={
               theme == "dark" ? `bg-[#1C1C1C] p-[10px] border-gray-800 border rounded-xl my-[15px] flex-row justify-between items-center` 
               : `bg-[#458BED] p-[10px] rounded-xl my-[15px] flex-row justify-between items-center`}>

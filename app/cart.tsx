@@ -9,11 +9,10 @@ import { useTheme } from "~/components/Theme/ThemeProvider";
 
 export default function Cart(){
 
-   const {
+    const {
       showModalCharger,
       setShowModalCharger
     } = useStore()
-
     const { theme } = useTheme();
 
     return(

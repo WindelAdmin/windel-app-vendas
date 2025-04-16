@@ -21,13 +21,11 @@ import { StatusBar} from "react-native";
 export default function Login() {
 
   const { theme } = useTheme();
- 
   const [msgInputEmpty, setMsgInputEmpty] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isNotShowPassword, setIsNotShowPassword] = useState(true);
 
-  
 
   const handleLogin = () => {
     if(email.trim() === "" || password.trim() === "") {
@@ -41,7 +39,7 @@ export default function Login() {
   return (
     <LinearGradient 
     className="flex-1"  
-    colors={theme == "dark" ? ['#1C1C1C', '#000'] : ['#0965E5', '#0014EE', '#2773DC']} start={{ x: 0.4, y: 0.0 }}>
+    colors={theme == "dark" ? ['#1C1C1C','#1C1C1C'] : ['#0965E5', '#0014EE', '#2773DC']} start={{ x: 0.4, y: 0.0 }}>
 
      <StatusBar barStyle="light-content" backgroundColor={theme === "dark" ? "#1C1C1C" : "#0965E5"}  />
      <KeyboardAvoidingView 
