@@ -27,8 +27,8 @@ export default function Settings() {
         <View className={styles.containerContent}>
           <View 
            className={
-            theme == "dark" ? "bg-gray-800 px-2 rounded-md border border-[#363636]" 
-            : "bg-slate-200 rounded px-2 border-gray-300 border"}>
+            theme == "dark" ? "bg-gray-800 px-2 py-2 rounded-md border border-[#363636]" 
+            : "bg-slate-200 rounded px-2 py-2 border-gray-300 border"}>
             <View className="flex-row items-center justify-between">
                 <Text 
                 className={

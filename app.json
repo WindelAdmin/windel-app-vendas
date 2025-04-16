@@ -37,6 +37,15 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.anonymous.windelapp"
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "00578223-8d62-4ed6-bdd9-b4e231cc0f1b"
+      }
+    },
+    "owner": "drigue_franc"
   }
 }

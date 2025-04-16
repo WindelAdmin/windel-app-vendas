@@ -21,7 +21,7 @@ export default function Home() {
         <LinearGradient colors={theme == "dark" ? ['#1C1C1C', '#1C1C1C'] : ['#0965E5', '#0251BD']} className={styles.header}>
           <View className={styles.subContainer}>
             <Text className={styles.windel}>Windel</Text>
-            <Text className={styles.mobile}>Mobile</Text>
+            <Text className={styles.mobile}>Vendas</Text>
           </View>
           <View className={styles.subContainer}>
             <Ionicons name='settings-sharp' color="#fff" size={25} onPress={() => router.push("/settings")}/>

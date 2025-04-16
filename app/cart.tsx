@@ -23,10 +23,14 @@ export default function Cart(){
             <Text className="text-[20px] color-white">Carrinho</Text>
           </View>
         </LinearGradient>
-        <View className="flex-1">
+        <View style={{flex: 1.8}}>
           
         </View>
-         <View className={theme == "dark" ? "bg-[#1C1C1C] h-[35%] rounded-t-3xl py-[10px] px-[15px]" : `bg-[#FFF] h-[35%] rounded-t-3xl py-[10px] px-[15px]`} 
+         <View 
+         className={
+          theme == "dark" ? "bg-[#1C1C1C] rounded-t-3xl py-[10px] px-[15px] flex-1" 
+          : `bg-[#FFF] rounded-t-3xl py-[10px] px-[15px] flex-1`} 
+          
            style={{
             elevation: 30, 
             shadowColor: '#000',

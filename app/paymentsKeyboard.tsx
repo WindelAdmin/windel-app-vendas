@@ -38,7 +38,7 @@ export default function PaymentsKeyboard(){
             </Text>
             <Text className={theme == "dark" ? `text-white font-bold text-[35px]` : `text-[35px] font-bold`}>R$ 20,00</Text>
          </View>
-         <View className="px-4 flex-1">
+         <View className="px-4 flex-1 py-4">
             <NumericPad
             {...( { ref: numpadRef } as any )}
             numLength={8}

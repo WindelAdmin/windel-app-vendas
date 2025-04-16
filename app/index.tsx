@@ -12,7 +12,6 @@ import {Ionicons} from "@expo/vector-icons";
 import { LinearGradient } from 'expo-linear-gradient';
 import {router} from "expo-router";
 import * as Animatable from 'react-native-animatable';
-import { useStore } from "~/store/store";
 import { useTheme } from "~/components/Theme/ThemeProvider";
 import { StatusBar} from "react-native";
 
@@ -49,7 +48,7 @@ export default function Login() {
      
         <Animatable.View className={styles.containerHeader} animation={"slideInLeft"}>
           <Text className={theme == "dark" ? `text-[27px] font-bold color-[#00BFFF]` : `text-[27px] font-bold color-[#fff]`} >Bem Vindo(a)</Text>
-          <Text className={styles.subTitle}>Ao Windel Mobile</Text>
+          <Text className={styles.subTitle}>Ao Windel Vendas</Text>
         </Animatable.View>
         <Animatable.View 
           className={ theme == 'dark' ? `flex-1 bg-slate-800 rounded-s-3xl px-[25px]`

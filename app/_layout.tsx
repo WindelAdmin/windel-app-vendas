@@ -24,7 +24,7 @@ export default function Layout() {
           <Stack.Screen name='paymentsKeyboard'/>
           <Stack.Screen name="settings"/>
         </Stack>
-    </ThemeProvider>
+     </ThemeProvider>
     </BottomSheetModalProvider>
     </GestureHandlerRootView>
   )
