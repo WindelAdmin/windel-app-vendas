@@ -38,7 +38,7 @@ export default function PaymentsKeyboard(){
             </Text>
             <Text className={theme == "dark" ? `text-white font-bold text-[35px]` : `text-[35px] font-bold`}>R$ 20,00</Text>
          </View>
-         <View className="px-4 flex-1 py-4">
+         <View className="px-4 flex-1 pb-3">
             <NumericPad
             {...( { ref: numpadRef } as any )}
             numLength={8}
@@ -65,8 +65,8 @@ export default function PaymentsKeyboard(){
 
 const styles = {
     subContainer: `flex-row items-center`,
-    header: `px-[20px] py-[20px] rounded-b-2xl overflow-hidden flex-row justify-between items-center`,
-    containerValue: `items-center justify-center py-8 gap-1`,
+    header: `px-[20px] py-[20px] rounded-b-2xl overflow-hidden flex-row justify-between items-center mb-8`,
+    containerValue: `items-center justify-center gap-1`,
     value: `text-[35px] font-bold`,
     buttonPayment: `bg-[#0251BD] rounded mx-[20px] py-[12px]`,
     textButton: `text-center color-[#fff] font-bold`,
