@@ -74,7 +74,7 @@ export default function PaymentMethod(){
 }
 
 const styles = {
-    container: `w-[100%] bg-[#fff] h-[35%] absolute bottom-[0px] rounded-t-3xl px-[10px] overflow-hidden`,
+    container: `w-[100%] bg-[#fff] h-[45%] absolute bottom-[0px] rounded-t-3xl px-[10px] overflow-hidden border border-[#A9A9A9] pb-[10px]`,
     textTitle: `text-[17px] text-center py-[15px] font-semibold ml-[25px]`,
     buttonPaymentMethod: `p-[12px] rounded border border-[#0251BD] border-[2px]`,
     textButtonPaymentMethod: `color-[#0251BD] font-bold text-center`
