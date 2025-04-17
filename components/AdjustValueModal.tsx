@@ -16,7 +16,7 @@ export default function AdjustValueModal(){
     const {
         setShowModalAsjustValue,
         label
-    } = useStore()
+    } = useStore();
 
     return (
         <KeyboardAvoidingView

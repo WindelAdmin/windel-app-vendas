@@ -17,7 +17,7 @@ export default function ModalPayments() {
     setShowModalCharger,
     showModalPaymentMethod,
     setShowModalPaymentMethod
-  } = useStore()
+  } = useStore();
 
     return (
       <BlurView intensity={80} tint="dark" style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
