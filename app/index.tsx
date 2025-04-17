@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import { 
   View, 
   Text,
@@ -16,7 +16,8 @@ import { useTheme } from "~/components/Theme/ThemeProvider";
 import { StatusBar} from "react-native";
 import { useToast } from 'react-native-toast-notifications';
 import LoadingModal from "~/components/LoadingModal";
-
+import * as SecureStore from 'expo-secure-store';
+import { KEYS } from "../consts/keys"
 
 export default function Login() {
 
@@ -65,6 +66,10 @@ export default function Login() {
 
         const data = await response.json();
 
+        if (data.token) {
+          await SecureStore.setItemAsync(KEYS.AUTH_TOKEN, data.token);
+        }
+
         setLoading(false)
         router.replace("/home");
 
@@ -72,6 +77,28 @@ export default function Login() {
         console.error("Error", error);
     }
   }
+
+  useEffect(() => {
+    const checkLogin = async () => {
+      try {
+        const token = await SecureStore.getItemAsync(KEYS.AUTH_TOKEN);
+
+        if (token) {
+          router.replace("/home");
+        } else {
+          router.replace("/");
+        }
+      } catch (err) {
+         console.error("Erro ao verificar token:", err);
+         router.replace("/");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    checkLogin();
+  }, []);
+
 
   return (
       <LinearGradient 
