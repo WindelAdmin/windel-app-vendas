@@ -3,15 +3,19 @@ import {View, Text , TouchableOpacity, Modal} from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import {Ionicons, Feather} from "@expo/vector-icons";
 import {router} from "expo-router";
-import ModalPayments from "~/components/ModalPayments";
+import ModalPayments from "~/components/PaymentsModal";
 import { useStore } from '../store/store';
 import { useTheme } from "~/components/Theme/ThemeProvider";
+import AdjustValueModal from "~/components/AdjustValueModal";
 
 export default function Cart(){
 
     const {
       showModalCharger,
-      setShowModalCharger
+      setShowModalCharger,
+      showModalAdjustValue,
+      setShowModalAsjustValue,
+      setLabel
     } = useStore()
     const { theme } = useTheme();
 
@@ -47,7 +51,12 @@ export default function Cart(){
               :`bg-[rgba(0.0.0.0.4)] h-[0.5px] mt-5`}></View>
 
             <View className={styles.containerButtons}>
-              <TouchableOpacity className={styles.buttonDiscount}>
+              <TouchableOpacity 
+                className={styles.buttonDiscount} 
+                onPress={() => {
+                  setShowModalAsjustValue(true);
+                  setLabel("Desconto");
+                }}>
                 <Ionicons name="remove-circle" size={25} color={theme == "dark" ? "#4682B4" : "#0251BD"}/>
                 <View>
                   <Text 
@@ -62,7 +71,14 @@ export default function Cart(){
                   </Text>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity className={styles.buttonDiscount}>
+
+              <TouchableOpacity 
+               className={styles.buttonDiscount}
+               onPress={() => {
+                setShowModalAsjustValue(true);
+                setLabel("Adicional");
+              }}
+               >
                 <Ionicons name="add-circle" size={25} color={theme == "dark" ? "#4682B4" : "#0251BD"}/>
                 <View>
                   <Text 
@@ -77,6 +93,7 @@ export default function Cart(){
                   </Text>
                 </View>
               </TouchableOpacity>
+
             </View>
             <TouchableOpacity className={theme == "dark" ? "bg-[#4682B4] rounded p-[12px]" :"bg-[#0251BD] rounded p-[12px]"} onPress={() => setShowModalCharger(true)}>
               <Text className={styles.textButton}>Pagamento</Text>
@@ -94,6 +111,9 @@ export default function Cart(){
             </TouchableOpacity>
             <Modal visible={showModalCharger} transparent={true}>
                <ModalPayments/>
+            </Modal>
+            <Modal visible={showModalAdjustValue} transparent={true}>
+               <AdjustValueModal/>
             </Modal>
          </View>
       </View>

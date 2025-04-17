@@ -8,7 +8,7 @@ import {Ionicons, Feather, FontAwesome, MaterialIcons, MaterialCommunityIcons} f
 import { useStore } from "~/store/store";
 import {router} from "expo-router";
 import { BlurView } from 'expo-blur';
-import PaymentMethod from "./PaymentMethod";
+import PaymentMethod from "./PaymentMethodModal";
 
 
 export default function ModalPayments() {

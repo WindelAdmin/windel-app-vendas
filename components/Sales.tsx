@@ -3,7 +3,7 @@ import React, { useMemo, useRef, useCallback, useState } from 'react';
 import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
 import {Ionicons, Feather} from "@expo/vector-icons";
 import { useStore } from '../store/store';
-import ModalPayments from './ModalPayments';
+import ModalPayments from './PaymentsModal';
 import {router} from "expo-router"
 import { KeyboardAvoidingView, Platform } from 'react-native';
 import { useTheme } from "~/components/Theme/ThemeProvider";

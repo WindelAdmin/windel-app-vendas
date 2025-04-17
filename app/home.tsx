@@ -8,12 +8,21 @@ import Data from "../data.json";
 import CardProduct from "~/components/CardProduct";
 import {  useTheme  } from "~/components/Theme/ThemeProvider";
 import {  StatusBar } from "react-native";
-
+import { Picker } from "@react-native-picker/picker";
 
 
 export default function Home() {
 
   const {theme} = useTheme();
+  const [category, setCategory] = useState([
+    {key: 1, category: "Comidas"},
+    {key: 2, category: "Bebidas"},
+    {key: 3, category: "Limpeza"}
+  ])
+
+  let categoryItem = category.map((item, index) => {
+    return <Picker.Item key={index} value={index} label={item.category}/>
+  })
 
   return (
       <View className={theme == "dark" ? "flex-1 bg-gray-900" : "flex-1 "}>
@@ -45,6 +54,21 @@ export default function Home() {
                       placeholder="Busque um item"
                 />
             </View>
+              <View className={
+                theme == "dark" ? "self-end flex-row items-center justify-center bg-gray-800 rounded-md border border-[#363636] pl-4 mb-[15px]" : 
+                "self-end flex-row items-center justify-center bg-white rounded-md border border-[#D3D3D3] pl-4 mb-[15px]"}>
+                 <Text 
+                    className={
+                      theme == "dark" ? "text-[1.20rem] font-semibold color-white" 
+                      :"text-[1.20rem] font-semibold color-[#363636]"}>
+                    Categoria:
+                 </Text>
+                <View className="w-[40%]"> 
+                  <Picker style={{color: `${theme == "dark" ? "#fff" : "#363636"}`}}>
+                    {categoryItem}
+                  </Picker>
+                </View>
+              </View>
               <FlatList
                 showsVerticalScrollIndicator={false}
                 data={Data}
