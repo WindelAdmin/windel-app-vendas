@@ -8,10 +8,11 @@ import { useStore } from "~/store/store";
 
 
 
+
 export default function Settings() {
 
     const { theme, toggleTheme } = useTheme();
-    const {showModalLogout, setShowModalLogout} = useStore()
+    const {showModalLogout, setShowModalLogout} = useStore(); 
 
     return (
       <View className={theme == "dark" ? "flex-1 bg-gray-900" : "flex-1 "}>

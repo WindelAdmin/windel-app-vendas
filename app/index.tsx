@@ -19,6 +19,7 @@ import LoadingModal from "~/components/LoadingModal";
 import * as SecureStore from 'expo-secure-store';
 import { KEYS } from "../consts/keys"
 
+
 export default function Login() {
 
   const [msgInputEmpty, setMsgInputEmpty] = useState("");
@@ -29,7 +30,6 @@ export default function Login() {
 
   const toast = useToast();
   const { theme } = useTheme();
-
 
   const handleLogin = async () => {
      
@@ -80,25 +80,20 @@ export default function Login() {
 
   useEffect(() => {
     const checkLogin = async () => {
+      
       try {
         const token = await SecureStore.getItemAsync(KEYS.AUTH_TOKEN);
-
         if (token) {
           router.replace("/home");
-        } else {
-          router.replace("/");
+          return;
         }
       } catch (err) {
-         console.error("Erro ao verificar token:", err);
-         router.replace("/");
-      } finally {
-        setLoading(false);
+        console.error("Erro ao verificar token:", err);
       }
     };
-
+  
     checkLogin();
   }, []);
-
 
   return (
       <LinearGradient 

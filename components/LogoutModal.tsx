@@ -3,11 +3,19 @@ import React from 'react'
 import { BlurView } from 'expo-blur';
 import { useStore } from "~/store/store";
 import {router} from "expo-router";
+import * as SecureStore from 'expo-secure-store';
+import { KEYS } from "../consts/keys"
 
 
 export default function LogoutModal() {
 
   const {setShowModalLogout} = useStore()
+
+  const handleLogout = async () => {
+    await SecureStore.deleteItemAsync(KEYS.AUTH_TOKEN);
+    setShowModalLogout(false)
+    router.replace("/");
+  };
   
   return (
     <BlurView intensity={80} tint="dark" style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
@@ -19,10 +27,7 @@ export default function LogoutModal() {
              <Text className='text-center font-semibold'>Não</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity className='w-[50%]' onPress={() => {
-            router.replace("/");
-            setShowModalLogout(false)
-            }}>
+          <TouchableOpacity className='w-[50%]' onPress={handleLogout}>
              <Text className='text-center font-semibold'>Sim</Text>
           </TouchableOpacity>
         </View>

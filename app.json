@@ -18,10 +18,10 @@
       "tsconfigPaths": true
     },
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/windel_icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/windel.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import { View, Text, FlatList, TextInput } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import {Ionicons, Feather} from "@expo/vector-icons";
@@ -9,7 +9,6 @@ import CardProduct from "~/components/CardProduct";
 import {  useTheme  } from "~/components/Theme/ThemeProvider";
 import {  StatusBar } from "react-native";
 import { Picker } from "@react-native-picker/picker";
-
 
 export default function Home() {
 
