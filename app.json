@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "windel-app",
-    "slug": "windel-app",
+    "name": "Windel Vendas",
+    "slug": "windel-vendas",
     "version": "1.0.0",
-    "scheme": "windel-app",
+    "scheme": "windel-vendas",
     "web": {
       "bundler": "metro",
       "output": "static",
