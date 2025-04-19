@@ -3,12 +3,13 @@ import {View, Text , TouchableOpacity} from "react-native";
 import { useTheme } from "~/components/Theme/ThemeProvider";
 import {Ionicons, Feather} from "@expo/vector-icons";
 
-type CardProps = {
-    name: string;
-    price: number
+export type CardProps = {
+  id: number;
+  nome: string;
+  preco: number;
 }
 
-export default function CardProduct ({name, price}: CardProps){
+export default function CardProduct ({nome, preco}: CardProps){
 
     const { theme } = useTheme();
 
@@ -22,12 +23,12 @@ export default function CardProduct ({name, price}: CardProps){
             <Text 
               className={theme == "dark" ? `text-[18px] font-bold color-[#fff]` 
               : `text-[18px] font-bold color-[#363636]`}>
-                {name}
+                {nome}
             </Text>
             <Text 
               className={theme == "dark" ? `font-semibold color-[#fff]`
               : `font-semibold color-[#363636]`}>
-                R$ {price}
+                R$ {preco}
             </Text>
             </View>
             <View className="flex-row justify-end gap-4">

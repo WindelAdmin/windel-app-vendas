@@ -13,7 +13,7 @@ export default function Settings() {
 
     const { theme, toggleTheme } = useTheme();
     const {showModalLogout, setShowModalLogout} = useStore(); 
-
+    
     return (
       <View className={theme == "dark" ? "flex-1 bg-gray-900" : "flex-1 "}>
         <LinearGradient 
@@ -35,7 +35,10 @@ export default function Settings() {
                 className={
                     theme == "dark" ? "text-[18px] font-semibold text-white"
                     : "text-[18px] font-semibold text-gray-700"}>
-                        Ativar modo escuro
+                     { 
+                       theme == "dark" ? "Desativar modo escuro" 
+                       : "Ativar modo escuro"
+                     }   
                 </Text>
                 <Switch
                 onValueChange={toggleTheme}

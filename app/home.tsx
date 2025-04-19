@@ -1,11 +1,17 @@
-import {useState, useEffect} from "react"
-import { View, Text, FlatList, TextInput } from 'react-native';
+import {useState, useCallback} from "react"
+import { 
+  View, 
+  Text, 
+  FlatList, 
+  TextInput,
+  ListRenderItemInfo 
+} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import {Ionicons, Feather} from "@expo/vector-icons";
 import {router} from "expo-router";
 import Sales from "~/components/Sales";
 import Data from "../data.json";
-import CardProduct from "~/components/CardProduct";
+import CardProduct, {CardProps} from "~/components/CardProduct";
 import {  useTheme  } from "~/components/Theme/ThemeProvider";
 import {  StatusBar } from "react-native";
 import { Picker } from "@react-native-picker/picker";
@@ -22,6 +28,16 @@ export default function Home() {
   let categoryItem = category.map((item, index) => {
     return <Picker.Item key={index} value={index} label={item.category}/>
   })
+
+  const renderItem = useCallback(({item} : ListRenderItemInfo<CardProps>) => {
+       return (
+         <CardProduct
+          id={item.id}
+          nome={item.nome}
+          preco={item.preco}
+        />
+       )
+  },[]);
 
   return (
       <View className={theme == "dark" ? "flex-1 bg-gray-900" : "flex-1 "}>
@@ -73,12 +89,10 @@ export default function Home() {
                 data={Data}
                 contentContainerStyle={{ paddingBottom: 120 }}
                 keyExtractor={(item) => String(item.id)}
-                renderItem={({item}) => (
-                <CardProduct
-                  name={item.nome}
-                  price={item.preco}
-               />
-              )}
+                initialNumToRender={5}
+                maxToRenderPerBatch={5}
+                renderItem={renderItem}
+                windowSize={4}
              />
         </View>
         <Sales/>
