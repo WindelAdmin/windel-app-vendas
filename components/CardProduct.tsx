@@ -4,7 +4,6 @@ import { useTheme } from "~/components/Theme/ThemeProvider";
 import {Ionicons, Feather} from "@expo/vector-icons";
 
 export type CardProps = {
-  id: number;
   nome: string;
   preco: number;
 }

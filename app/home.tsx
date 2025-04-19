@@ -32,7 +32,6 @@ export default function Home() {
   const renderItem = useCallback(({item} : ListRenderItemInfo<CardProps>) => {
        return (
          <CardProduct
-          id={item.id}
           nome={item.nome}
           preco={item.preco}
         />
